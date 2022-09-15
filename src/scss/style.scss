@@ -146,7 +146,6 @@ h1 {
 .section-process {
   background-color: $dark-gray;
   color: #fff;
-  margin-bottom: 4.8em;
 }
 
 .process__container {
@@ -208,6 +207,87 @@ h1 {
   border-radius: 50%;
 }
 
+/* ---------------------------- SKILLS SECTION ---------------------------- */
+
+.section-skills {
+  padding: 4.8rem 0;
+  .skills__heading {
+    color: $green;
+    text-align: center;
+    // margin: ;
+  }
+  .skills {
+    width: 80%;
+    margin: 0 auto;
+
+    &__bar {
+      width: 80%;
+      height: 40px;
+      margin: 0 auto;
+      margin-bottom: 7px;
+      border-radius: 3px;
+      display: flex;
+      flex-direction: row;
+      transition: all 0.4s linear;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      &-name {
+        width: 20%;
+        background-color: $text-gray;
+        color: #fff;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+      }
+
+      &-percentages {
+        width: 100%;
+        height: 100%;
+        background-color: $ligth-gray;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 1rem;
+
+        .percentage-filled {
+          width: 50%;
+          height: 100%;
+          background-color: #54be90;
+
+          &.html {
+            width: 80%;
+          }
+          &.css {
+            width: 80%;
+          }
+          &.javascript {
+            width: 70%;
+          }
+          &.react {
+            width: 60%;
+          }
+          &.jquery {
+            width: 70%;
+          }
+          &.php {
+            width: 60%;
+          }
+          &.laravel {
+            width: 60%;
+          }
+          &.ux {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
 /* ---------------------------- ABOUT ME SECTION ---------------------------- */
 
 .section-about {

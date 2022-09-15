@@ -135,7 +135,6 @@ h1 {
 .section-process {
   background-color: #232323;
   color: #fff;
-  margin-bottom: 4.8em;
 }
 
 .process__container {
@@ -190,6 +189,80 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
+}
+
+/* ---------------------------- SKILLS SECTION ---------------------------- */
+.section-skills {
+  padding: 4.8rem 0;
+}
+.section-skills .skills__heading {
+  color: #54be90;
+  text-align: center;
+}
+.section-skills .skills {
+  width: 80%;
+  margin: 0 auto;
+}
+.section-skills .skills__bar {
+  width: 80%;
+  height: 40px;
+  margin: 0 auto;
+  margin-bottom: 7px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: row;
+  transition: all 0.4s linear;
+}
+.section-skills .skills__bar:hover {
+  transform: scale(1.05);
+}
+.section-skills .skills__bar-name {
+  width: 20%;
+  background-color: #444;
+  color: #fff;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+.section-skills .skills__bar-percentages {
+  width: 100%;
+  height: 100%;
+  background-color: #ebebeb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1rem;
+}
+.section-skills .skills__bar-percentages .percentage-filled {
+  width: 50%;
+  height: 100%;
+  background-color: #54be90;
+}
+.section-skills .skills__bar-percentages .percentage-filled.html {
+  width: 80%;
+}
+.section-skills .skills__bar-percentages .percentage-filled.css {
+  width: 80%;
+}
+.section-skills .skills__bar-percentages .percentage-filled.javascript {
+  width: 70%;
+}
+.section-skills .skills__bar-percentages .percentage-filled.react {
+  width: 60%;
+}
+.section-skills .skills__bar-percentages .percentage-filled.jquery {
+  width: 70%;
+}
+.section-skills .skills__bar-percentages .percentage-filled.php {
+  width: 60%;
+}
+.section-skills .skills__bar-percentages .percentage-filled.laravel {
+  width: 60%;
+}
+.section-skills .skills__bar-percentages .percentage-filled.ux {
+  width: 50%;
 }
 
 /* ---------------------------- ABOUT ME SECTION ---------------------------- */

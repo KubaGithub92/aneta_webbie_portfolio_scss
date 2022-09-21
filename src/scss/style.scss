@@ -48,53 +48,96 @@ h3 {
   position: sticky;
   top: 0;
   z-index: 100;
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 20%;
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+
+  &__logo-icon {
+    width: 3.5rem;
+  }
+
+  &__logo-text {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
+  &__nav {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    text-transform: uppercase;
+    background-color: $text-gray;
+    letter-spacing: -1px;
+    font-size: 1.2rem;
+  }
+
+  &__nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 100%;
+    color: $ligth-gray;
+    flex: 1;
+    transition: 0.4s ease-in-out;
+    /* align-self: center; */
+
+    &:hover {
+      background-color: $green;
+      color: #444;
+    }
+  }
+
+  .nav__btn {
+    padding: 1rem;
+    display: block;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .nav__btn-line {
+    width: 2.4rem;
+    height: 3px;
+    background-color: #232323;
+    border-radius: 3px;
+    margin-bottom: 3px;
+  }
 }
 
-.header__logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  width: 20%;
-  background-color: rgba(255, 255, 255, 0.8);
-}
+@media (max-width: 768px) {
+  .header__nav {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    width: 80%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.98;
+    font-size: 1.8rem;
+    // display: none;
+    visibility: hidden;
+  }
 
-.header__logo-icon {
-  width: 3.5rem;
-}
+  .header__nav-item {
+    color: $dark-gray;
+  }
 
-.header__logo-text {
-  font-size: 2rem;
-  font-weight: 800;
+  .header__nav_show {
+    visibility: visible;
+  }
 }
-
-.header__nav {
-  width: 80%;
-  height: 100%;
-  display: flex;
-  text-transform: uppercase;
-  background-color: $text-gray;
-  letter-spacing: -1px;
-  font-size: 1.2rem;
-}
-
-.header__nav-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  height: 100%;
-  color: $ligth-gray;
-  flex: 1;
-  transition: 0.4s ease-in-out;
-  /* align-self: center; */
-}
-
-.header__nav-item:hover {
-  background-color: $green;
-  color: #444;
-}
-
 /* ---------------------------- SECTION HERO ---------------------------- */
 
 .section-hero {

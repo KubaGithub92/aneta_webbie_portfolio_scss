@@ -128,14 +128,14 @@ h3 {
     font-size: 1.8rem;
     // display: none;
     visibility: hidden;
+
+    &_show {
+      visibility: visible;
+    }
   }
 
   .header__nav-item {
     color: $dark-gray;
-  }
-
-  .header__nav_show {
-    visibility: visible;
   }
 }
 /* ---------------------------- SECTION HERO ---------------------------- */
@@ -155,19 +155,19 @@ h3 {
   flex: 0 0 60%;
   margin-top: 5rem;
   line-height: 1.4;
+
+  p {
+    font-size: 1.8rem;
+  }
+
+  strong {
+    color: $green;
+    border-bottom: 0.4rem solid #fff;
+  }
 }
 
 h1 {
   font-size: 3.2rem;
-}
-
-.hero__text p {
-  font-size: 1.8rem;
-}
-
-.hero__text strong {
-  color: $green;
-  border-bottom: 0.4rem solid #fff;
 }
 
 /* ---------------------------- SECTION INTRO ---------------------------- */
@@ -381,30 +381,50 @@ h1 {
 .section-about {
   width: 100%;
   background-color: #ededed;
+  padding: 4.8rem 0;
 
   h2 {
     text-align: center;
   }
 
   .about__container {
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     gap: 4.8rem;
     // background-color: orangered;
-    padding: 3.2rem 0;
+    padding: 1.8rem 0;
+
+    @media (max-width: 816px) {
+      gap: 2.4rem;
+      padding: 0;
+    }
 
     .about__image {
       width: 250px;
       height: 250px;
       border-radius: 50%;
+      overflow: hidden;
+      justify-content: center;
+    }
+
+    .about__image-item {
+      width: 100%;
+      transition: all 0.4s;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
 
     .about__text {
       width: 50%;
       line-height: 1.5;
+
+      @media (max-width: 816px) {
+        width: 70%;
+      }
     }
   }
 }
@@ -417,11 +437,11 @@ h1 {
   color: #fff;
   padding-bottom: 4.8rem;
   text-transform: uppercase;
-}
 
-.section-find h2 {
-  text-align: center;
-  padding-top: 3.2rem;
+  h2 {
+    text-align: center;
+    padding-top: 3.2rem;
+  }
 }
 
 .find__icon-container {
@@ -470,9 +490,10 @@ h1 {
       justify-content: space-between;
       align-items: center;
 
-      // display: grid;
-      // grid-template-columns: 1fr 1fr;
-      // gap: 2.4rem;
+      @media (max-width: 984px) {
+        flex-flow: column nowrap;
+        width: 100%;
+      }
     }
 
     .contact__form-item {
@@ -483,6 +504,10 @@ h1 {
       border-bottom: 1px solid #fff;
       color: #fff;
       height: 2rem;
+
+      @media (max-width: 984px) {
+        width: 80%;
+      }
 
       &:-webkit-autofill {
         box-shadow: 0 0 0 1000px $green inset !important;

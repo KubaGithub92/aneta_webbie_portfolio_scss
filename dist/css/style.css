@@ -114,11 +114,11 @@ h3 {
     font-size: 1.8rem;
     visibility: hidden;
   }
-  .header__nav-item {
-    color: #232323;
-  }
   .header__nav_show {
     visibility: visible;
+  }
+  .header__nav-item {
+    color: #232323;
   }
 }
 /* ---------------------------- SECTION HERO ---------------------------- */
@@ -137,18 +137,16 @@ h3 {
   margin-top: 5rem;
   line-height: 1.4;
 }
-
-h1 {
-  font-size: 3.2rem;
-}
-
 .hero__text p {
   font-size: 1.8rem;
 }
-
 .hero__text strong {
   color: #54be90;
   border-bottom: 0.4rem solid #fff;
+}
+
+h1 {
+  font-size: 3.2rem;
 }
 
 /* ---------------------------- SECTION INTRO ---------------------------- */
@@ -337,27 +335,48 @@ h1 {
 .section-about {
   width: 100%;
   background-color: #ededed;
+  padding: 4.8rem 0;
 }
 .section-about h2 {
   text-align: center;
 }
 .section-about .about__container {
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   gap: 4.8rem;
-  padding: 3.2rem 0;
+  padding: 1.8rem 0;
+}
+@media (max-width: 816px) {
+  .section-about .about__container {
+    gap: 2.4rem;
+    padding: 0;
+  }
 }
 .section-about .about__container .about__image {
   width: 250px;
   height: 250px;
   border-radius: 50%;
+  overflow: hidden;
+  justify-content: center;
+}
+.section-about .about__container .about__image-item {
+  width: 100%;
+  transition: all 0.4s;
+}
+.section-about .about__container .about__image-item:hover {
+  transform: scale(1.1);
 }
 .section-about .about__container .about__text {
   width: 50%;
   line-height: 1.5;
+}
+@media (max-width: 816px) {
+  .section-about .about__container .about__text {
+    width: 70%;
+  }
 }
 
 /* ---------------------------- SECTION FIND ME HERE ---------------------------- */
@@ -368,7 +387,6 @@ h1 {
   padding-bottom: 4.8rem;
   text-transform: uppercase;
 }
-
 .section-find h2 {
   text-align: center;
   padding-top: 3.2rem;
@@ -416,6 +434,12 @@ h1 {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 984px) {
+  .contact .contact__form .contact__form-container_top {
+    flex-flow: column nowrap;
+    width: 100%;
+  }
+}
 .contact .contact__form .contact__form-item {
   min-width: 43%;
   margin: 1.4rem;
@@ -424,6 +448,11 @@ h1 {
   border-bottom: 1px solid #fff;
   color: #fff;
   height: 2rem;
+}
+@media (max-width: 984px) {
+  .contact .contact__form .contact__form-item {
+    width: 80%;
+  }
 }
 .contact .contact__form .contact__form-item:-webkit-autofill {
   box-shadow: 0 0 0 1000px #54be90 inset !important;

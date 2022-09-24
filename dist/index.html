@@ -11,7 +11,6 @@
       href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700;800&display=swap"
       rel="stylesheet"
     />
-    <script src="/src/js/script.js" defer></script>
     <title>Aneta Webbie Portfolio Page</title>
   </head>
   <body>
@@ -36,9 +35,9 @@
         <div class="header__logo-text green_text">AW</div>
       </div>
       <nav class="header__nav">
-        <a href="#" class="header__nav-item">Home</a>
-        <a href="#" class="header__nav-item">Skills</a>
-        <a href="#" class="header__nav-item">Portfolio</a>
+        <a href="#hero" class="header__nav-item">Home</a>
+        <a href="#skills" class="header__nav-item">Skills</a>
+        <a href="#portfolio" class="header__nav-item">Portfolio</a>
         <a href="#about" class="header__nav-item">About me</a>
         <a href="#contact" class="header__nav-item">Contact</a>
       </nav>
@@ -49,7 +48,7 @@
       </div>
     </header>
     <main>
-      <section class="section-hero">
+      <section class="section-hero" id="hero">
         <div class="hero__text">
           <h1>Hi, I am <strong>Aneta Webbie.</strong></h1>
           <p>I'm a Full-stack Web Developer.</p>
@@ -65,7 +64,7 @@
           >.
         </p>
       </section>
-      <section class="section-process">
+      <section class="section-process" id="process">
         <div class="process__container">
           <div class="process__item">
             <div class="process__circle"></div>
@@ -109,7 +108,7 @@
           </div>
         </div>
       </section>
-      <section class="section-skills">
+      <section class="section-skills" id="skills">
         <h2 class="skills__heading">Skills</h2>
         <div class="skills">
           <div class="skills__bar">
@@ -177,7 +176,7 @@
           </div>
         </div>
       </section>
-      <section class="portfolio">
+      <section class="portfolio" id="portfolio">
         <h2>Portfolio</h2>
         <div class="portfolio__grid-container">
           
@@ -233,11 +232,13 @@
       <section class="section-about" id="about">
         <h2>About Me</h2>
         <div class="about__container">
-          <img
-            src="img/thisisengineering-raeng-69wEv-G2W_s-unsplash.jpg"
-            alt="Photo of Aneta Webbie"
-            class="about__image"
-          />
+          <div class="about__image">
+            <img
+              src="img/aneta_webbie_coding.jpg"
+              alt="Photo of Aneta Webbie"
+              class="about__image-item"
+            />
+          </div>
           <div class="about__text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
             accusantium. Nihil accusamus nisi consequuntur, maxime beatae iure
@@ -250,7 +251,7 @@
           </div>
         </div>
       </section>
-      <section class="section-find">
+      <section class="section-find" id="find">
         <h2>Find me here</h2>
         <div class="find__icon-container">
           <div class="find__icon-item">
